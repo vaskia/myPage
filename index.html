@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+* {
+ padding: 0;
+ margin: 0;
+}
+body {
+ background: #fedfde;
+ text-align: center;
+}
+.header {
+ width: 100%;
+ background: #8f2cee;
+ color: white;
+ text-align: left;
+ padding: 50px 5%;
+ }
+.container, .sidebar {
+ text-align: left;
+ width: 500px;
+ padding: 100px 5%;
+ font-size: 2em;
+ display: inline-block;
+ color: #99b; 
+}
+.container  {
+ background: #eedefd;
+}
+.sidebar {
+ background: #fedfde;
+}
+h2 {
+ color: #8f2cee;
+ font-weight: monospace;
+ padding: 0 0 5%;
+}
+img {
+ width: 100%;
+ opacity: .7;
+ margin-bottom: 5%;
+}
+.date {
+ font-size: .5em;
+ margin-bottom: 5%;
+}
+</style>
+</head>
+<body>
+<div class="header">Header</div>
+<script>
+
+for (var i = 12; i > 0; i--) {
+	var date = new Date().toLocaleDateString();
+	var sidebar = document.createElement("div");
+	sidebar.className = "sidebar";
+        
+	sidebar.innerHTML = "<h2>Lorem ipsum dolor sit amet</h2><div class='date'>" + date + "</div><img src = 'https://bezmd.ru/wp-content/uploads/2017/12/1514211071_maxresdefault.jpg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+	 document.body.appendChild(sidebar);
+	 console.log(i);
+}
+
+
+</script>
+
+</body>
+</html>
